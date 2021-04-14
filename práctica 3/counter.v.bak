@@ -1,0 +1,39 @@
+module counter #(parameter N = 4)(
+	input iClk,
+	input	iRst,
+	input	iC,
+	input	iE_C,
+	output [N-1:0] oS
+)
+
+reg [N-1:0] rCount_D;
+reg [N-1:0] rCount_Q;
+reg [N-1:0] rReset_D;
+reg [N-1:0] rReset_D;
+
+assign oS = rCount_Q;
+
+always @ (posedge iClk or posedge iRst)
+begin
+	if(iRst)
+		rReset_D <= 4'd0;
+		rCount_Q <= 4'd0;
+	else if(iE_C)
+		rCount_Q = rCount_D;
+	else if(iC)
+		rReset_D <= rReset_Q;
+		rCount_Q <= rCount_D;
+	else
+		rCount_Q <= rCount_Q;
+end
+
+
+always @ * 
+begin
+if (rCount_D == 4'd9)
+	rCount_D = 4'd0;
+else
+	rCount_D = rCount_Q + 1'd1;
+end
+
+endmodule
