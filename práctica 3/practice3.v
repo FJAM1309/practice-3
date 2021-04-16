@@ -57,25 +57,25 @@ counter #(.N(4)) Millares(
 .oS (oC4)
 );
 
-BCD #(.N(7)) DUnidades(
+BCD DUnidades(
 .iE (oC1),
 .iClk (iClk),
 .oS (oS1)
 );
 
-BCD #(.N(7)) DDecenas(
+BCD DDecenas(
 .iE (oC2),
 .iClk (iClk),
 .oS (oS2)
 );
 
-BCD #(.N(7)) DCentenas(
+BCD DCentenas(
 .iE (oC3),
 .iClk (iClk),
 .oS (oS3)
 );
 
-BCD #(.N(7)) DMillares(
+BCD DMillares(
 .iE (oC4),
 .iClk (iClk),
 .oS (oS4)
