@@ -1,1 +1,6 @@
 practice-3
+Contador a 9999
+
+Primero que hace falta explicar a detalle que es lo que se necesita para esta práctica. Se debe desarrollar un contador de 0 a 9999 con un reset y carga paralela. El reset será un botón encargado de que al momento de ser presionado regrese la cuenta a 0. La carga paralela será la encargada de que al momento de presionar un botón se cargue el número que se pondrá de manera binaria en los switches de la tarjeta y se mostrara en los displays. 
+Existen dos maneras diferentes para crear el algoritmo que separe las unidades, decenas, centenas y unidades de millar de la cuenta. La primera es que los contadores estén en cascada; esto significa que cada contador le manda una señal de clock enable al siguiente contador para que cuente el momento que llegue a 0. El otro método es que solo exista un contador que vaya de 0 a 9999 y que un módulo separe cada uno de los dígitos por medio del algoritmo corrimiento suma 3. 
+Ya que se tenga implementado el método seleccionado es importante tener 4 convertidores de BCD a 7 segmentos y que estos convertidores tengan 2 entradas: una para la cuenta normal y otro para la carga paralela y que el mismo modulo decida cual cargarle al multiplexor.
